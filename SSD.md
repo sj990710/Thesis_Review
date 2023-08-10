@@ -1,6 +1,6 @@
 # SSD (2016)
 **Single Shot Multi Detector**   
-Rewview.LSJ, 2023.08.08   
+Review.LSJ, 2023.08.08   
 ## Abstract   
 
 ## Introduction   
