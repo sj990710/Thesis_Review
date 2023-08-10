@@ -6,7 +6,7 @@ Review.LSJ, 2023.08.08
 * 1-stage 모델임에도 불구하고 2-stage 모델인 Faster R-CNN 능가하는 정확도
 * Single Deep Neural Network(단일 깊은 신경망)을 사용
 * 6개의 서로다른 scale의 Multi Feature Map과 각 Feature Map의 각 cell마다 서로 다른 scale과 aspect ratio를 가진 Default Box 사용
-* * Default Box : Faster R-CNN 모델의 Anchor Box와 유사한 개념의 bounding box. 다양한 해상도를 갖는 feature map을 활용한다는 점이 다름
+  > Default Box : Faster R-CNN 모델의 Anchor Box와 유사한 개념의 bounding box. 다양한 해상도를 갖는 feature map을 활용한다는 점이 다름
 ## Introduction   
 
 ## The Single Shot Detector(SSD)   
