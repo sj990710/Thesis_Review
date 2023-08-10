@@ -18,7 +18,7 @@ Review.LSJ, 2023.08.08
   
 ## The Single Shot Detector(SSD)
 
-## Model
+### Model
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/70e17146-3356-480d-936a-ef4d812c268e)
 
 ## Training   
