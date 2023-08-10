@@ -15,9 +15,9 @@ Review.LSJ, 2023.08.08
 * VGG-16 모델을 통해 인풋 이미지를 처리하여 저해상도에서도 높은 정확도를 보임
   > VGG-16 : Visual Geometry Group에서 개발한 이미지 인식 모델로 16 개의 계층으로 이루어짐
 * VGG-16 모델을 기반으로 한 Early-Stage(특성 추출 파트)에 auxiliary structure(객체 탐지 파트)가 추가된 구조
-### The Single Shot Detector(SSD)   
+## The Single Shot Detector(SSD)   
 
-## Model   
+## Model
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/70e17146-3356-480d-936a-ef4d812c268e)
 
 ## Training   
