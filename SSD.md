@@ -24,7 +24,7 @@ Review.LSJ, 2023.08.08
 * 사전 학습된 합성곱 신경망인 base network에 보조 네트워크,Extra Feature Layers(추가적인 합성곱 계층들)을 이어붙임
 
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/29b14993-ea8e-4f9d-a47e-0dffa3c4b0b3)
-
+* 실제로 detect 할 때는 NMS(Non-Max-Suppression)을 통해 줄어든 bounding box들을 이용
 ### Multi-Scale Feature Maps For Detection
 * 7x7 사이즈의 feature map만을 사용했던 YOLO 1과 달리 다양한 사이즈의 feature map을 통해 다양한 크기의 객채 인
 * 38x38, 19x19, 10x10, 5x5, 3x3, 1x1 6종류의 사이즈
