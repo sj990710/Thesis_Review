@@ -37,7 +37,9 @@ Review.LSJ, 2023.08.08
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/5d1a76ab-7790-4803-9fc7-22b963a01383)
   > s_k : 원본 이미지에 대한 k번째 feature map의 비율
-  > m : feature map의 개수 
+  > m : feature map의 개수
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/e4083d5b-3f6f-469d-95d4-802db664db31)
+
 ## Training(PASCAL VOC 데이터 셋. class 수: 20개)
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/2dc5d624-0f5d-4119-a692-cfcddf382b31)
 
