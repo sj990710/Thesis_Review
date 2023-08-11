@@ -27,13 +27,29 @@ Review.LSJ, 2023.08.08
   > feature size = 3x3x바운딩박스 개수x(class+offset)
 
 ### Multi-Scale Feature Maps For Detection
-* 7x7 사이즈의 feature map만을 사용했던 YOLO 1과 달리 6종류의 feature map으로 나누고 output과 연결
-* 38x38, 19x19, 10x10, 5x5, 3x3, 1x1
+* 7x7 사이즈의 feature map만을 사용했던 YOLO 1과 달리 다양한 사이즈의 feature map을 통해 다양한 크기의 객채 인
+* 38x38, 19x19, 10x10, 5x5, 3x3, 1x1 6종류의 사이즈
+* 작은 feature map에서는 큰 객체, 큰 feature map에서는 작은 개체 인식
+
+### Convolutional Predictors For Detection
+* 각 feature map에서 3x3 filter를 사용해 객체 인식
+* m x n x p의 feature map이 있으면, 3 x 3 x p개 convolutional filter는 default box 좌표에 해당하는 offset과 class score를 생성
+### Default Boxes And Aspect Ratios  
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
+
 ## Training   
+
+### Matching strategy
+
+### Training objective 
+
+### Choosing scales and aspect ratios for default boxes 
+
+### Hard negative mining 
 
 ## Experimental Results   
 
-## PASCAL VOC2007   
+### PASCAL VOC2007   
 
-## Model Analysis   
+### Model Analysis   
 
