@@ -36,12 +36,15 @@ Review.LSJ, 2023.08.08
 * m x n x p의 feature map이 있으면, 3 x 3 x p개 convolutional filter는 default box 좌표에 해당하는 offset과 class score를 생성
 ### Default Boxes And Aspect Ratios  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
-
-## Training   
+* 각 feature map의 cell에 3x3 크기의 (c+4) x k개의 filter 적용 => (c+4) x k x m x n 출력
+  > 4:offset, c: class score, k: default box 수
+## Training(PASCAL VOC 데이터 셋. class 수: 20개)
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/2dc5d624-0f5d-4119-a692-cfcddf382b31)
 
 ### Matching strategy
-
+* ground truth와 default box를 미리 매칭 시켜 IOU가 0.5를 넘는 bounding box만 loss 계산에 사용
 ### Training objective 
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/78bbf2b0-a7eb-4246-98ee-c92d2195c184)
 
 ### Choosing scales and aspect ratios for default boxes 
 
