@@ -9,7 +9,7 @@ Review.LSJ, 2023.08.08
   > Default Box : Faster R-CNN 모델의 Anchor Box와 유사하지만 다양한 해상도를 갖는 feature map 활용
   
   > Anchor box : 이미지에서 객체의 위치와 크기를 탐지하기 위해 사용되는 사전 정의된 박스
-* offset : bounding box의 위치를 조정하기 위한 값
+
 ## Introduction   
 * 기존의 모델들은 속도와 정확도 간 trade-off를 통해 하나만을 살림
 * Faster R-CNN보다 빠르고 YOLO보다 정확
@@ -26,17 +26,17 @@ Review.LSJ, 2023.08.08
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/29b14993-ea8e-4f9d-a47e-0dffa3c4b0b3)
 * 각 feature map에서 3x3 conv filter를 통해 bounding box의 class와 offset 예측
   > feature size = 3x3x바운딩박스 개수x(class+offset)
-
+  > offset : bounding box의 위치를 조정하기 위한 값
 ### Multi-Scale Feature Maps For Detection
 * 7x7 사이즈의 feature map만을 사용했던 YOLO 1과 달리 다양한 사이즈의 feature map을 통해 다양한 크기의 객채 인
 * 38x38, 19x19, 10x10, 5x5, 3x3, 1x1 6종류의 사이즈
 * 작은 feature map에서는 큰 객체, 큰 feature map에서는 작은 개체 인식
 
 ### Convolutional Predictors For Detection
-* 각 feature map에서 3x3 filter를 사용해 가로 세로 크기 유지
-* 출력 채널의 수가 k(4+c)가 되게 함
-* k 개의 default box에 대한 4개의 bounding box offset, c개의 클래스 별 confidence score(신뢰 점수) 출력
-  > confidence score : 결과에 대한 신뢰도. 높을수록 믿을만한 정보
+* 객체 p장의 3 x 3사이즈의 kernel이 있는 CNN으로 객체를 예측
+* 일정한 사이즈의 예측값
+* 예측한 bounding box의 값은 kernel이 convolution 연산을 적용한 영역 내 중심좌표와의 offset
+
 ### Default Boxes And Aspect Ratios  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
 * 각 feature map의 cell에 3x3 크기의 (c+4) x k개의 filter 적용 => (c+4) x k x m x n 출력
