@@ -47,6 +47,8 @@ Review.LSJ, 2023.08.08
 * ground truth와 default box를 미리 매칭 시켜 IOU가 0.5를 넘는 bounding box만 loss 계산에 사용
 ### Training objective 
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/78bbf2b0-a7eb-4246-98ee-c92d2195c184)
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/1b53adc0-bc60-4b3e-8f9a-30cbddf43ae2)
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a10b6685-1bdc-4bdb-a1e5-887e501b03cf)
 
 ### Choosing scales and aspect ratios for default boxes 
 
