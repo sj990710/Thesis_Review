@@ -31,7 +31,7 @@ Review.LSJ, 2023.08.08
 ### Convolutional Predictors For Detection
 * 객체 p장의 3 x 3사이즈의 kernel이 있는 CNN으로 객체를 예측
 * 일정한 사이즈의 예측값
-* 예측한 bounding box의 값은 kernel이 convolution 연산을 적용한 영역 내 중심좌표와의 offset
+* 예측한 bounding box의 값은 kernel이 convolution 연산을 적용한 영역 내 중심좌표와의 offset과 신뢰 점수를 나타냄
 
 ### Default Boxes And Aspect Ratios  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
