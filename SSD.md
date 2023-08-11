@@ -24,9 +24,7 @@ Review.LSJ, 2023.08.08
 * 사전 학습된 합성곱 신경망인 base network에 보조 네트워크,Extra Feature Layers(추가적인 합성곱 계층들)을 이어붙임
 
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/29b14993-ea8e-4f9d-a47e-0dffa3c4b0b3)
-* 각 feature map에서 3x3 conv filter를 통해 bounding box의 class와 offset 예측
-  > feature size = 3x3x바운딩박스 개수x(class+offset)
-  > offset : bounding box의 위치를 조정하기 위한 값
+
 ### Multi-Scale Feature Maps For Detection
 * 7x7 사이즈의 feature map만을 사용했던 YOLO 1과 달리 다양한 사이즈의 feature map을 통해 다양한 크기의 객채 인
 * 38x38, 19x19, 10x10, 5x5, 3x3, 1x1 6종류의 사이즈
