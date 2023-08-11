@@ -1,5 +1,5 @@
 # SSD (2016)
-**Single Shot Multi Detector**   
+**Single Shot Multibox Detector**   
 Review.LSJ, 2023.08.08   
 ## Abstract   
 * region proposal(영역 제안) 과정을 생략하는 1-stage 모델
