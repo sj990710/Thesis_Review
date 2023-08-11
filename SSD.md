@@ -49,14 +49,26 @@ Review.LSJ, 2023.08.08
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/78bbf2b0-a7eb-4246-98ee-c92d2195c184)
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/1b53adc0-bc60-4b3e-8f9a-30cbddf43ae2)
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a10b6685-1bdc-4bdb-a1e5-887e501b03cf)
-
-### Choosing scales and aspect ratios for default boxes 
+* N : 매칭된 디폴트 박스 개수. N이 0이라면 L도 0이 됨
+* 가중치 알파는 1로 설정
+* Localization 손실: 디폴트 박스와 참 경계 박스 사이의 Smooth L1 손실
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/f594b759-c926-4248-9bf6-a83a090d8756)
 
 ### Hard negative mining 
-
-## Experimental Results   
-
+* 대부분의 default max는 negative임
+* positive와 negative 사이에 불균형 발생
+* confidence loss로 negative example 정렬 후 positive : negative = 1 : 3이 되도록 sample
 ### PASCAL VOC2007   
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/aceef5f8-a983-4d3b-8a29-664942de4376)
 
 ### Model Analysis   
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c36531da-3169-47f1-b690-d9b96340fd47)
 
+## Advantage and Disadvantage
+
+### 장점  
+* 다양한 feature map 사용해 다양한 크기의 물체들 인식 가능
+* 6개의 bounding box를 통해 겹치는 좌표의 다양한 물체들도 인식 가능
+
+### 단점  
+* 여러 feature map의 detection을 계산하므로 compution cost 증가
