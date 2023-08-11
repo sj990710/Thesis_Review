@@ -37,8 +37,8 @@ Review.LSJ, 2023.08.08
 
 ### Default Boxes And Aspect Ratios  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
-* 각 feature map의 cell에 3x3 크기의 (c+4) x k개의 filter 적용 => (c+4) x k x m x n 출력
-  > 4:offset, c: class score, k: default box 수
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/5d1a76ab-7790-4803-9fc7-22b963a01383)
+
 ## Training(PASCAL VOC 데이터 셋. class 수: 20개)
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/2dc5d624-0f5d-4119-a692-cfcddf382b31)
 
