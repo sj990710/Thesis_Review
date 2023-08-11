@@ -3,12 +3,13 @@
 Review.LSJ, 2023.08.08   
 ## Abstract   
 * region proposal(영역 제안) 과정을 생략하는 1-stage 모델
-* 1-stage 모델임에도 불구하고 2-stage 모델인 Faster R-CNN 능가하는 정확도
 * Single Deep Neural Network(단일 깊은 신경망)을 사용
+* 1-stage 모델임에도 불구하고 2-stage 모델인 Faster R-CNN 능가하는 정확도
 * 6개의 서로다른 scale의 Multi Feature Map과 각 Feature Map의 각 cell마다 서로 다른 scale과 aspect ratio를 가진 Default Box 사용   
   > Default Box : Faster R-CNN 모델의 Anchor Box와 유사하지만 다양한 해상도를 갖는 feature map 활용
   
   > Anchor box : 이미지에서 객체의 위치와 크기를 탐지하기 위해 사용되는 사전 정의된 박스
+* offset : bounding box의 위치를 조정하기 위한 값
 ## Introduction   
 * 기존의 모델들은 속도와 정확도 간 trade-off를 통해 하나만을 살림
 * Faster R-CNN보다 빠르고 YOLO보다 정확
@@ -32,8 +33,10 @@ Review.LSJ, 2023.08.08
 * 작은 feature map에서는 큰 객체, 큰 feature map에서는 작은 개체 인식
 
 ### Convolutional Predictors For Detection
-* 각 feature map에서 3x3 filter를 사용해 객체 인식
-* m x n x p의 feature map이 있으면, 3 x 3 x p개 convolutional filter는 default box 좌표에 해당하는 offset과 class score를 생성
+* 각 feature map에서 3x3 filter를 사용해 가로 세로 크기 유지
+* 출력 채널의 수가 k(4+c)가 되게 함
+* k 개의 default box에 대한 4개의 bounding box offset, c개의 클래스 별 confidence score(신뢰 점수) 출력
+  > confidence score : 결과에 대한 신뢰도. 높을수록 믿을만한 정보
 ### Default Boxes And Aspect Ratios  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/96ddccba-063c-49e7-a15c-c46455c92c76)
 * 각 feature map의 cell에 3x3 크기의 (c+4) x k개의 filter 적용 => (c+4) x k x m x n 출력
