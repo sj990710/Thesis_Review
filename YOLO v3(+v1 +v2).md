@@ -24,4 +24,17 @@ Review.LSJ, 2023.08.25
 * Input image를 S x S 칸의 grid cell로 분할
 
 * 각 grid cell들은 Bbox와 각 box들에 대한 confidence 및 class probability 예측
-*   Pr(Object) * IoU
+*  Confidence = Pr(Object) * IoU
+*  각 grid cell 당 가장 큰 확률값을 갖는 하나의 클래스만 예측(YOLO는 20개의 class를 지원)
+*  NMS(Non-maximal suppression)을 통해 detection 완료
+
+## Network Design
+*  24개의 convolutional layer(feature 추출)와 2개의 fully connected layer(예측)로 구성
+*  중간중간 1 x 1 conolution layer를 사용 feature map의 demension 감소
+*  output = 7 x 7 x 30 = (S x S x (5 * B + C))
+
+## Training
+*  주로 leaky ReLU 사용. 마지막 layer만 linear activation function 사용
+*  Loss Function
+ ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/f353dec8-b17d-4c6d-a8e4-7d055b443693)
+
