@@ -35,9 +35,17 @@ Review.LSJ, 2023.08.25
 
 ## Training
 *  주로 leaky ReLU 사용. 마지막 layer만 linear activation function 사용
+*  SSE(Sum-squared Error)를 이용해 최적화
+*  대부분의 grid cell은 confidence score가 0 -> 모델 불균형
+*  λ_coord (= 5)와 λ_noobj (= 0.5)의 파라미터를 추가 -> bbox의 좌표 예측 손실 증가, 신뢰도 예측 손실 감소
 *  Loss Function
  ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/f353dec8-b17d-4c6d-a8e4-7d055b443693)
 
-$
-1_i^obj
-$
+## Inference
+*  이미지 한 장 98(7*7*2)개의 바운딩 박스 및 각 박스에 대한 클래스 확률 예측
+*  하나의 객체를 여러 grid cell들이 detection 하는 경우 NMS을 통해 해결->mAP 2~3% 상승
+
+## 한계점
+*  1개의 grid cell이 1개의 객체만을 detection-> 공간적 제약 -> 새 떼와 같이 많은 수의 작은 객체들 detection 잘 못함
+*  새로운 aspect ratio에 대한 탐지가 어려움
+*  손실함수 SSE가 BB 크기와 관계 없이 가중치를 동일하게 취급한 문제를 해결하지 못함
