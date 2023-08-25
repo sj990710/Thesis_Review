@@ -64,4 +64,10 @@ Review.LSJ, 2023.08.25
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/faaf37f3-2458-4c48-8503-339418c077fd)
 >  k : clustering의 개수. 논문에선 5개로 선정
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a6094704-b8f0-4217-8913-393b93405a1c)
+* Direct location prediction
+>  anchor box를 활용한 bbox offset 예측은 box의 위치를 제한 x -> 초기학습 시 불안정 -> 많은 시간 소요
+>  sigmoid 함수 통해 offset 범위 0~1로 제한
+>  각 바운딩 박스마다 5개의 값(t_x, t_y, t_w, t_h, t_o) 예측
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c925db58-5d63-4336-bd1c-5d678f88c653)
+> c_x : 좌측 상
 
