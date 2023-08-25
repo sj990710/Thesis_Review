@@ -38,3 +38,6 @@ Review.LSJ, 2023.08.25
 *  Loss Function
  ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/f353dec8-b17d-4c6d-a8e4-7d055b443693)
 
+$
+1_i^obj
+$
