@@ -10,9 +10,9 @@ Review.LSJ, 2023.08.25
 > IoU : Intersection over Union
 
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/4a0e4ffd-9d13-48f5-b4cd-d493294b0ac2)
+# YOLO (You Only Look Once: unified real-time object detection)
 
 ## Introduction
-**YOLO**
 * 기존의 2-stage 모델의 느린 속도를 보완하기 위해 만들어진 1-stage 모델
 
 * object detection을 classification이 아닌 regression으로 접근
