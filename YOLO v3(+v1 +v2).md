@@ -46,6 +46,22 @@ Review.LSJ, 2023.08.25
 *  하나의 객체를 여러 grid cell들이 detection 하는 경우 NMS을 통해 해결->mAP 2~3% 상승
 
 ## 한계점
-*  1개의 grid cell이 1개의 객체만을 detection-> 공간적 제약 -> 새 떼와 같이 많은 수의 작은 객체들 detection 잘 못함
+*  새 떼와 같이 많은 수의 작은 객체들 detection 잘 못함
 *  새로운 aspect ratio에 대한 탐지가 어려움
 *  손실함수 SSE가 BB 크기와 관계 없이 가중치를 동일하게 취급한 문제를 해결하지 못함
+
+# YOLO v2(9000: Better, Faster, Stronger)
+*  Better : 정확도 증가
+*  Faster : detection 속도 향상
+*  Stronger : 더 많은 범위의 class 예측
+
+## Better
+* Batch Nomalization을 추가 -> mAP 2%가량 증가
+* Convolutional with Anchor boxes -> mAP 0.3% 감소했지만 recall 4% 증가 => 개선될 여지가 있음
+* Dimension Clusters 사용
+>  일반적인  Euclidean distance 사용, 중심 좌표가 가장 짧은 것을 기준 시 IoU가 낮은 anchor 박스 선정 가능
+>  IoU 기준으로 k-mean Clustering 사용
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/faaf37f3-2458-4c48-8503-339418c077fd)
+>  k : clustering의 개수. 논문에선 5개로 선정
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a6094704-b8f0-4217-8913-393b93405a1c)
+
