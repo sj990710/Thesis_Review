@@ -67,7 +67,35 @@ Review.LSJ, 2023.08.25
 * Direct location prediction
 >  anchor box를 활용한 bbox offset 예측은 box의 위치를 제한 x -> 초기학습 시 불안정 -> 많은 시간 소요
 >  sigmoid 함수 통해 offset 범위 0~1로 제한
->  각 바운딩 박스마다 5개의 값(t_x, t_y, t_w, t_h, t_o) 예측
-![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c925db58-5d63-4336-bd1c-5d678f88c653)
-> c_x : 좌측 상
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/86226c14-8e00-4bfb-b634-f9b24eed20bb)
+> 예측하는 범위가 정해짐으로써 안정적인 학습 가능
 
+## Faster
+* 대부분의 detection network는 VGG-16모델 사용 -> 뛰어나지만 너무 늦음
+* Darknet-19 새로 디자인
+  >  VGG-16 의 3 x 3 filter 사이에 1 x 1 filter로 차원 축소 및 FC layer 제거하여 연산량 감소
+
+## Stronger
+* classification data와 detection data를 학습에 같이 사용
+* 전자 : classification 부분만, 후자는 loss function 전체를 이용해 backpropagation 진행
+  >  class들이 exclusive 하지 않다
+* Hierarchical classification를 가진 Word Tree 만듦
+  ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d44df784-928d-4f8d-8db1-9d10c8c58b9d)
+
+# YOLO v3( An Incremental Improvement)
+## Bounding box prediction
+* bbox의 objectness score도 예측
+* bbox prior 와 ground truth의 IoU가 가장 크면 1, 아니며 전부 무시
+## Class Prediction
+* 각 bbox의 multilabel classification에 대한 결과 예측. Softmax < logistinc classfier
+## Predictions Across Scales
+* 마지막 layer의 feature만을 이용하지 않음
+* 그 이전 layer의 feature map을 concatenation
+* 이 과정을 통해 3개의 scale을 가진 feature map 이용
+* N * N * [3 * (4 + 1 + 80)]
+  >  3: bbox 개수, 4 : bbox의 offset (x,y,w,h), 1: objectiveness, 80: COCO 데이터 셋 class 개수
+## 결과
+* 320 x 320 입력에서 22ms속도 및 29.2mAP달성 -> SSD 수준의 정확도, 3배의 빠른 속도
+* VOC 기준 RetinaNet 수준의 성능, 3.8배 빠른 속도
+* COCO에서는 성능이 낮게 나옴. 객체에 정확하게 알맞는 bbox를 정하기 어려워 하는것으로 판단단
+ 
