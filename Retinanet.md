@@ -37,8 +37,11 @@ Review.LSJ, 2023.09.15
   > modulating factor $(1-p_t)^𝜸$와 tunable focusing parameter $𝜸$를 CE에 추가한 형태
   
 
-* ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d2395857-483e-476f-9c54-e106318a5ec8)
-* 
+ ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d2395857-483e-476f-9c54-e106318a5ec8)
+* 서로 다른 𝜸값에 따른 loss
+* CE는 $p_t$에 따른 example의 차이가 크지 않음
+* FL은 focusing parameter 𝜸에 따라 $p_t$에 따른 example의 차이가 큼
+
 
 ## **Retinanet**  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a2967415-bf20-4bcb-9aab-672562068368)
