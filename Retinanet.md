@@ -21,7 +21,9 @@ Review.LSJ, 2023.09.15
 ##  **Focal Loss**  
 * one-stage detector 모델에서 foreground와 background 사이에 발생하는 극단적인 class imbalance(ex.1:1000)을 해결하는데 사용  
 * 이진 분류에서 사용되는 CE(Cross Entropy) loss function으로부터 비롯됨
-  > **CE Loss** 
+  > **CE Loss**
+  > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a4b7818b-77c5-4e59-a70e-20045253c1e1)
+
   > * 문제점 : 모든 sample에 대한 예측 결과에 동등한 가중치 부여
   > * 결과 : 쉽게 분류될 수 있는 sample도 큰 loss 유발-> 학습 방해
 
