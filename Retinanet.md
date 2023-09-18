@@ -53,10 +53,8 @@ Review.LSJ, 2023.09.15
   * backbone network에 이미지를 입력하여 서로 다른 5개의 scale을 가진 feature pyramid 출력
   + Input : image  
    Process : feature extraction by ResNet+FPN  
-   Output : feature pyramid(P3~p7)  
-   > Backbone Network : 
+   Output : feature pyramid(P3~p7)
 
-   > Feature Pyramid 
 * **Classification by Classification subnetwork**  
  * pyramid level 별 feature map을 Classification Subnetwork에 입력  
  * feature map의 각 cell마다 sigmoid activation function 적용  
