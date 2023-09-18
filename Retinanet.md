@@ -34,8 +34,8 @@ Review.LSJ, 2023.09.15
   
   >  **Focal Loss**  
   > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c4f4853d-dd02-4514-8e7e-20a51bcfbcfb)  
-  > modulating factor $(1-p_t)^𝜸$와 tunable focusing parameter $𝜸$를 CE에 추가한 형태  
-  * ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d2395857-483e-476f-9c54-e106318a5ec8)
+  > modulating factor $(1-p_t)^𝜸$와 tunable focusing parameter $𝜸$를 CE에 추가한 형태
+* ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d2395857-483e-476f-9c54-e106318a5ec8)
 
 ## **Retinanet**  
 * **Feature Pyramid by ResNet+FPN**  
