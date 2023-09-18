@@ -6,10 +6,11 @@ Review.LSJ, 2023.09.15
   > cross entropy loss+(class에 따라 변하는 동적인)scaling factor의 형태  
 
   > easy exampled의 기여도를 자동으로 dpwn-weight하며, hard example에 대한 가중치를 높혀 학습 집중
-* positive/negative sample  
+* positive/negative sample
+* easy/hard sample 
 * down weight
 * class imbalance
-* 
+* pyramid 
 ## **Introduction**  
 * Object Detection 모델은 IoU threshold에 따라 positive/negative sample로 구분 후 이를 활용해 학습  
   * 일반적으로 background의 수가 object보다 훨씬 많기에 **class imbalance** 야기
