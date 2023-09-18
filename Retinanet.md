@@ -10,7 +10,6 @@ Review.LSJ, 2023.09.15
 * easy/hard sample : 실제 sample로 쉽게 예측/힘들게 예측
 * down weight : 특정 변수의 중요도 감소시키는 것 -> 모델의 성능 최적환 오버핏팅 방지
 
-* pyramid 
 ## **Introduction**  
 * Object Detection 모델은 IoU threshold에 따라 positive/negative sample로 구분 후 이를 활용해 학습  
   * 일반적으로 background의 수가 object보다 훨씬 많기에 **class imbalance** 야기
