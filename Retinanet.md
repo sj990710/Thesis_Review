@@ -6,7 +6,10 @@ Review.LSJ, 2023.09.15
   > cross entropy loss+(class에 따라 변하는 동적인)scaling factor의 형태  
 
   > easy exampled의 기여도를 자동으로 dpwn-weight하며, hard example에 대한 가중치를 높혀 학습 집중
-
+* positive/negative sample  
+* down weight
+* class imbalance
+* 
 ## **Introduction**  
 * Object Detection 모델은 IoU threshold에 따라 positive/negative sample로 구분 후 이를 활용해 학습  
   * 일반적으로 background의 수가 object보다 훨씬 많기에 **class imbalance** 야기
@@ -14,7 +17,7 @@ Review.LSJ, 2023.09.15
   + 추가로 Online Hard Example Mining 통해 object와 background 비율 조정
 * One-stage 계열의 모델(ex.YOLO)의 경우 region proposal 과정 없이 feature map에서 localization  
   + 전체 이미지를 순회하며 sampling 하기에 two-stage 모델에 비해 훨씬 많은 후보 영역 생성함-> class imbalance가 더 심각함  
-* 이에 대한 해결책으로 **Loss Function** 제시
+* 이에 대한 해결책으로 새로운 Loss Function 제시
 
 # **Main Ideas**  
 
