@@ -41,6 +41,8 @@ Review.LSJ, 2023.09.15
 * 
 
 ## **Retinanet**  
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a2967415-bf20-4bcb-9aab-672562068368)
+
 * **Feature Pyramid by ResNet+FPN**  
   * backbone network에 이미지를 입력하여 서로 다른 5개의 scale을 가진 feature pyramid 출력
   + Input : image  
