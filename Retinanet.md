@@ -63,4 +63,12 @@ Review.LSJ, 2023.09.15
 * 속도 향상 위해 각 FPN의 pyramid level에서 가장 점수가 높은 1000개의 prediction 사용  
 * subnetwork의 출력 결과에서 모든 level의 prediction 병합 후 Non maximum suppression(threshod = 0.5)를 통해 최종 prediction 산출  
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/df3e83f3-11de-4f99-88f9-ddb5b40f8d3c)  
+* RetinaNet을 CoCo 데이터셋으로 학습시킨 후 각 loss functio에 대한 AP 값 결과
+  + CE loss : 30.2%
+  + Balance Cross Entropy : 31.1%
+  + Focal loss : 34%
+**OHEM:Online Hard Example Mining**
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/b73a79a6-88ba-4703-8202-f4b8be9b2dc3)
+* FL과 달리 easy example을 완전히 고려하지 않음
+* 다양한 하이퍼 파라미터를 통해 실험을 진행했지만 FL이 더 뛰어난 성능을 보임
 
