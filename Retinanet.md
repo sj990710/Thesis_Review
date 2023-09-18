@@ -23,18 +23,17 @@ Review.LSJ, 2023.09.15
 * 이진 분류에서 사용되는 CE(Cross Entropy) loss function으로부터 비롯됨
   > **CE Loss**
   > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/a4b7818b-77c5-4e59-a70e-20045253c1e1)
-
   > * 문제점 : 모든 sample에 대한 예측 결과에 동등한 가중치 부여
   > * 결과 : 쉽게 분류될 수 있는 sample도 큰 loss 유발-> 학습 방해
 
   > **Balanced Cross Entrioy**  
   이러한 문제를 해결하기 위해 가중치 파라미터인 $α∈[0,1]$를 곱해준 Balnced Cross Entropy 등장
-  >
+  > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/1689b901-beae-4186-8251-0179f82cb222)
   > * y = 1 일 때 $α$를, y=-1 일 때 $1-\alpha$를 곱해 positive/negative sample 간 균형 맞춤
   > * 하지만 easy/hard sample에 대해서는 균형을 잡지 못 함
   
   >  **Focal Loss**  
-  > 
+  > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c4f4853d-dd02-4514-8e7e-20a51bcfbcfb)
   > modulating factor $(1-p_t)^𝜸$와 tunable focusing parameter $𝜸$를 CE에 추가한 형태
 
 ## **Retinanet**  
