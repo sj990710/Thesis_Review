@@ -69,6 +69,7 @@ Review.LSJ, 2023.09.15
   + Focal loss : 34%
   
 **OHEM:Online Hard Example Mining**
+
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/b73a79a6-88ba-4703-8202-f4b8be9b2dc3)
 * FL과 달리 easy example을 완전히 고려하지 않음
 * 다양한 하이퍼 파라미터를 통해 실험을 진행했지만 FL이 더 뛰어난 성능을 보임
