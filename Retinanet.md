@@ -36,8 +36,9 @@ Review.LSJ, 2023.09.15
   > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c4f4853d-dd02-4514-8e7e-20a51bcfbcfb)  
   > modulating factor $(1-p_t)^𝜸$와 tunable focusing parameter $𝜸$를 CE에 추가한 형태
   
-*
+
 * ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d2395857-483e-476f-9c54-e106318a5ec8)
+* 
 
 ## **Retinanet**  
 * **Feature Pyramid by ResNet+FPN**  
@@ -60,4 +61,6 @@ Review.LSJ, 2023.09.15
 
 ## **Inference**  
 * 속도 향상 위해 각 FPN의 pyramid level에서 가장 점수가 높은 1000개의 prediction 사용  
-* subnetwork의 출력 결과에서 모든 level의 prediction 병합 후 Non maximum suppression(threshod = 0.5)를 통해 최종 prediction 산출
+* subnetwork의 출력 결과에서 모든 level의 prediction 병합 후 Non maximum suppression(threshod = 0.5)를 통해 최종 prediction 산출  
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/df3e83f3-11de-4f99-88f9-ddb5b40f8d3c)  
+
