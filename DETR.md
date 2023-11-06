@@ -23,8 +23,10 @@ Review.LSJ, 2023.11.05
   > 어떠한 집합 I와 matching 대상인 집합 J가 있을 때 ,i∈I를 j∈J에 matching하는데 드는 비용을 c(i,j)라 정의
   > σ:I → J로의 일대일 대응 중에서 가장 적은 cost가 드는 matching에 대한 permutation σ 찾음
   > > σ : matching 시 최적의 순서에 대한 index
-  > 
-
+  > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/0844f21b-f979-43a0-91d6-f858ba7a58f9)
+  > > 행 : predicted bounding box, 열 : ground truth, 각 요소 : 행열이 matching 되었을 때의 cost
+  > ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/e1db901e-657f-4e6a-9e0a-9bb18651cec9)
+  > > Fig3과 Fig4를 비교했을 때 Fig4의 matching cost가 더 작음
 
 ## **Introduction**  
 * ### **기존 object detection은 pre-defined anchor 사용**  
@@ -45,4 +47,22 @@ Review.LSJ, 2023.11.05
 ## **The DETR Model**
 ### **Object Detection Set Prediction Loss**
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d2245d4e-a6c2-47e9-95c9-691facfb9b28)
+  > L_match : prediction과 ground truth 사이의 pair-wise matching cost->N개의 예측들과 ground truth가 어떻게 매칭되어야 최소가 되는지 찾는 과정
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/0b9e743c-66ac-4978-ac36-1a9b974b42fe)
+  > 찾은 모든 pair에 Hungarian loss를 취함. Time complexity 완화.
+### **DETR architecture**  
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/c9fe9fb0-6fb7-498e-9354-7840caaa1b79)   
+* **Transformer encoder-decoder attention**
+  > 각 N개의 object queries(학습이 가능한 positional embedding)가 존재할 때 그들을 각각 병렬적으로 decoding
+  > 해당 정보들이 기본적으로 하나의 인스턴스(Class가 같더라도 개별적인 사물)가 되어 predict
+## **Result**  
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/09ebe37c-3f12-49ea-860a-24ac527531a1)
+
+## **장단점**  
+* 장점
+  > Faster R-CNN과 비슷한 성능인데 크기가 큰 객체를 훨씬 잘 포착함
+  > customized된 layers를 따로 정해줄 필요없이 손쉽게 standard CNN과 transformer 구조를 사용
+* 단점
+  > 작은 object를 잘 탐지하지 못 함
+  > Flop이 많아 학습시 많은 시간이 소요됨
 
