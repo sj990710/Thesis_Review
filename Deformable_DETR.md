@@ -21,9 +21,9 @@ Review.LSJ, 2023.12.01
 * DCN에서 conv filter의 offset 학습 시킨 것을 deformable DETR에서는 encder 내의 attention의 입력이 되는 key를 offset으로 사용
   + 논문에서는 4개의 offset point으로 사용, key의 요소가 감소하므로 모델의 연산량 감소  
 * Deformable Attention Module   
-![image](https://github.com/sj990710/Thesis_Review/assets/127752372/8469a439-f553-43d2-b1b5-810bc4854ced)
+![image](https://github.com/sj990710/Thesis_Review/assets/127752372/8469a439-f553-43d2-b1b5-810bc4854ced)   
 
-$x∈ℜ^{C*H*W}$   
+$ x\in\Re^{C*H*W} $   
 
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/d995fc6a-8cbd-4b60-84b3-0f954877d87f)
 ![image](https://github.com/sj990710/Thesis_Review/assets/127752372/80d3d160-d3c3-4f2d-b973-bc0f2cd510f7)
